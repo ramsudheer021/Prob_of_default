@@ -1,0 +1,287 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability of Default</title>
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+
+
+</head>
+
+<body>
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Probability of Default</a>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+
+
+    <div class="container">
+
+
+
+        <form action="\predict" method="post">
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Payment Method ID -->
+                            <h5 class="card-title">Income</h5>
+                              <label for="income">Income:</label>
+							  <input type="number" id="income" name="income" min="0"><br><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Payment Plan days -->
+                            <h5 class="card-title">Age</h5>
+                            <label for="age">Age:</label>
+							  <input type="number" id="age" name="age" min="18" max="100"><br><br>
+                            
+                        </div>
+                    </div>
+                </div>
+				<br>
+			   <br>
+            <br>
+            <br>
+			  <br>
+            <br>
+            
+				<div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Experience</h5>
+                            <label for="age">Experience:</label>
+							  <input type="number" id="experience" name="experience" min="0" max="100"><br><br>
+                        </div>
+                    </div>
+                </div>
+				
+				
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Marital Status</h5>
+                            <select name="marital_status" id="marital_status" required="required">
+                                <option value="single">Single</option>
+								<option value="married">Married</option>	
+                            </select>
+                        </div>
+                    </div>
+                </div>
+				   <br>
+            <br>
+            <br>
+			   <br>
+            <br>
+            <br>
+
+				<div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Is Auto Renew -->
+                            <h5 class="card-title">House Ownership</h5>
+                            <select name="house_ownership" id="house_ownership" required="required">
+                                <option value="Own">Own</option>
+                                <option value="Rent">Rent</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            <br>
+            <br>
+            <br>
+
+            <br>
+            <br>
+            <br>
+
+			
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Car Ownership</h5>
+                            <select name="car_ownership" id="car_ownership" required="required">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+				
+				
+				<div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+						<h5 class="card-title">Profession</h5>
+                            <select name="profession" id="profession" required="required">
+                                <option value="ENGINEER">ENGINEER</option>
+                                <option value="FINANCE">FINANCE</option>
+								<option value="MEDICAL">MEDICAL</option>
+                                <option value="GOVT">GOVT</option>
+								<option value="ARTS">ARTS</option>
+                                <option value="OTHER">OTHER</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+				
+				<br>
+
+            <br>
+            <br>
+            <br>
+				
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Is Auto Renew -->
+                            <h5 class="card-title">STATE</h5>
+                            <select name="state" id="state" required="required">
+                                <option value="Andhra_Pradesh">Andhra_Pradesh</option>
+								<option value="Assam">Assam</option>
+								<option value="Bihar">Bihar</option>
+								<option value="Chandigarh">Chandigarh</option>
+								<option value="Chhattisgarh">Chhattisgarh</option>
+								<option value="Delhi">Delhi</option>
+								<option value="Gujarat">Gujarat</option>
+								<option value="Haryana">Haryana</option>
+								<option value="Himachal_Pradesh">Himachal_Pradesh</option>
+								<option value="Jammu_and_Kashmir">Jammu_and_Kashmir</option>
+								<option value="Jharkhand">Jharkhand</option>
+								<option value="Karnataka">Karnataka</option>
+								<option value="Kerala">Kerala</option>
+								<option value="Madhya_Pradesh">Madhya_Pradesh</option>
+								<option value="Maharashtra">Maharashtra</option>
+								<option value="Manipur">Manipur</option>
+								<option value="Mizoram">Mizoram</option>
+								<option value="Odisha">Odisha</option>
+								<option value="Puducherry">Puducherry</option>
+								<option value="Punjab">Punjab</option>
+								<option value="Rajasthan">Rajasthan</option>
+								<option value="Sikkim">Sikkim</option>
+								<option value="Tamil_Nadu">Tamil_Nadu</option>
+								<option value="Telangana">Telangana</option>
+								<option value="Tripura">Tripura</option>
+								<option value="Uttar_Pradesh">Uttar_Pradesh</option>
+								<option value="Uttarakhand">Uttarakhand</option>
+								<option value="West_Bengal">West_Bengal</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+					<br>
+
+            <br>
+            <br>
+            <br>
+			<br>
+           
+				<div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Is Auto Renew -->
+                            <h5 class="card-title">Current Job Years</h5>
+                            <label for="current_job_years">current_job_years:</label>
+							<input type="number" id="current_job_years" name="current_job_years" min="0" max="100"><br><br>
+                        </div>
+                    </div>
+                </div>
+					<br>
+            <br>
+            <br>
+			<br>
+            <br>	
+				
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Age -->
+                            <h5 class="card-title">Current House Years</h5>
+                            <label for="current_house_years">current_house_years:</label>
+							<input type="number" id="current_house_years" name="current_house_years" min="0" max="100"><br><br>
+                        </div>
+                    </div>
+                </div>
+				<br>
+            <br>
+            <br>
+				<br>
+            <br>
+            <br>	
+                
+
+            </div>
+			<br>
+			<br>
+			</br>
+			</br>
+			<div class="col-sm-6">
+			<div class="row">	
+            <br>
+            <br>
+            <br>
+            <!-- Submit -->
+			<div class="row">
+			<br>
+            <input type="submit" value="Submit" class="btn btn-secondary">
+			</div>
+			</div>
+			</div>
+			</div>
+        </form>
+
+        <br>
+        <br>
+        <h3>{{ prediction_text }}</h3>
+
+        <br>
+        <br>
+        
+
+    </div>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
