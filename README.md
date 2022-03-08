@@ -28,7 +28,7 @@ python3 main-app.py
 
 11. create security group and assign to EC2 instance
 
-12. <use public AWS hostname>:8080 
+12. \<use public AWS hostname\>:8080 
 
 
   
